@@ -383,6 +383,12 @@ const INITIAL_TOKENS_CONTEXT = {
       [DECIMALS]: 18,
       [EXCHANGE_ADDRESS]: '0x8dE0d002DC83478f479dC31F76cB0a8aa7CcEa17'
     },
+    '0x150b0b96933B75Ce27af8b92441F8fB683bF9739': {
+      [NAME]: 'Dragonereum Gold',
+      [SYMBOL]: 'GOLD',
+      [DECIMALS]: 18,
+      [EXCHANGE_ADDRESS]: '0x7b1C3192eFa401eA37951feDC8007BcbEc2DBB6d'
+    },
     '0xE41d2489571d322189246DaFA5ebDe1F4699F498': {
       [NAME]: '0x Protocol Token',
       [SYMBOL]: 'ZRX',
