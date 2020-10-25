@@ -30,6 +30,7 @@ import useWrapCallback, { WrapType } from '../../hooks/useWrapCallback'
 import { useToggleSettingsMenu, useWalletModalToggle } from '../../state/application/hooks'
 import { Field } from '../../state/swap/actions'
 import {
+  useDefaultsFromURLSearch,
   useDerivedSwapInfo,
   useSwapActionHandlers,
   useSwapState
@@ -43,6 +44,8 @@ import { ClickableText } from '../Pool/styleds'
 import Loader from '../../components/Loader'
 
 export default function Swap() {
+  useDefaultsFromURLSearch()
+
   const { account } = useActiveWeb3React()
   const theme = useContext(ThemeContext)
 
