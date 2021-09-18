@@ -54,7 +54,19 @@ export default async function getTokenList(
       continue
     }
 
-    const json = await response.json()
+    const res = await response.json()
+
+    const json = {
+      ...res,
+      tokens: [{
+        address: '0x150b0b96933B75Ce27af8b92441F8fB683bF9739',
+        chainId: 1,
+        decimals: 18,
+        symbol: 'GOLD',
+        name: 'Dragonereum Gold',
+      }, ...res.tokens],
+    };
+
     if (!tokenListValidator(json)) {
       const validationErrors: string =
         tokenListValidator.errors?.reduce<string>((memo, error) => {
